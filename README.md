@@ -1,5 +1,5 @@
 ___
-# DELETE THIS INSTRUCTIONS AND ADD A SHORT INTRODUCTION ABOUT YOUR PROJECT
+# Developing image capturing and analysing system using FPGA
 ___
 
 ## Please refer the instructions in below URL:
