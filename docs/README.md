@@ -66,16 +66,20 @@ Image processing techniques are used to enhance the quality of multimedia conten
 
 Image processing three different levels :
 
-Low level-
+Low level: 
 	Image processing
-		input and output is an image
+			
+   			input and output is an image
 		
-Mid level-
+Mid level: 
 	Image analysis
-		input is an image and the output is attributes extact from the image
-High level-
+
+  			input is an image and the output is attributes extact from the image
+
+High level:
 	Computer vission
-		making sense of recognized objects(AI)
+		
+  			making sense of recognized objects(AI)
 
 
 image processing techniques:
