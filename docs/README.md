@@ -49,7 +49,7 @@ Image processing used to extract useful information from images.This information
 				Image enchance
 				Noice cancelling
 				Scientafic images
-![Sample Image](./images/or.jfif)
+![Sample Image](./images/or.jfif)   ![Qc](./images/Qc.png)  ![mi.png](./images/![mi.png](./)
 
 ## Some of the most common image processing applications include:
 
