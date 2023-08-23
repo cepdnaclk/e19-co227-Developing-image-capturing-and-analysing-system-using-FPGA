@@ -40,7 +40,7 @@ The image processing is used to extract useful information from images. This inf
 
 Image processing used to extract useful information from images.This information can be used for a variety of purposes:
 				
-    				[obfject recorgnizing Image](./images/or.jfif)
+    				obfject recorgnizing
 				Medical imaging
 				Quality control
 				Space exploration
@@ -49,6 +49,7 @@ Image processing used to extract useful information from images.This information
 				Image enchance
 				Noice cancelling
 				Scientafic images
+![Sample Image](./images/or.jfif)
 
 ## Some of the most common image processing applications include:
 
