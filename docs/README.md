@@ -98,9 +98,40 @@ It can be used to create new applications, such as virtual reality or augmented 
 
 Image processing is a powerful tool that can be used to solve a wide variety of problems. As the field continues to grow, we can expect to see even more innovative applications of image processing in the future.
 
-## FPGA
+## FPGA-(Field Programmable Gate Array)
+
+FPGA is an integrated circuit designed to be configured after manufacturing. The FPGA configuration is generally specified using a hardware description language (HDL).
+FPGAs contain an array of programmable logic blocks, and a hierarchy of reconfigurable interconnects allowing blocks to be wired together. Logic blocks can be configured to perform complex combinational functions, or act as simple logic gates like AND and XOR. In most FPGAs, logic blocks also include memory elements, which may be simple flip-flops or more complete blocks of memory. Many FPGAs can be reprogrammed to implement different logic functions, allowing flexible reconfigurable computing as performed in computer software.
+
+## Advantages of FPGAs over other types of integrated circuits :
+
+Flexibility:
+FPGAs can be reconfigured to implement different logic functions, making them ideal for applications that require a high degree of flexibility.
+
+Performance:
+FPGAs can be clocked at very high frequencies, making them ideal for applications that require high performance.
+Power efficiency: FPGAs can be very power efficient, making them ideal for battery-powered applications.
+
+Cost:
+FPGAs can be relatively inexpensive, making them a cost-effective solution for many applications.
+
+## Disadvantages:
+Complexity: 
+FPGAs can be complex to design and program, which can limit their adoption by some users.
+
+Cost:
+FPGAs can be more expensive than other types of integrated circuits, such as application-specific integrated circuits (ASICs).
+
+Time to market:
+FPGAs can take longer to bring to market than ASICs, which can be a disadvantage for some applications.
+
+Overall, FPGAs are a powerful and versatile type of integrated circuit that can be used in a wide variety of applications. They offer a number of advantages over other types of integrated circuits, but they also have some disadvantages. The best choice of integrated circuit for a particular application will depend on the specific requirements of that application.
+
 ## Solution
+To overcome the problems occur when using CPUs and GPUs to image processing as like as limited parallalism , latency, hard programming and energy consumption using a suitable FPGA to do calclulations for analysings and operations. Image converted to  matrix using python in computer and the matrix sent to the progeammed FPGA.FPGA Programme using HDL verilog.Then the matrix  manupiulation is done in the FPGA and the resault return to the computer.First goal to do law level image processing to gray images.Then improve for the colour images.
+
 ## Technology
+
 
 .....
 
