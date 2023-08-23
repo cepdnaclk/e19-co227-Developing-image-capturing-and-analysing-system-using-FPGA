@@ -19,10 +19,9 @@ This is a sample image, to show how to add images to your page. To learn more op
 ![Sample Image](./images/sample.png)
  -->
 
-## Team
+## Team-23
 -  E/19/423, Weerasingha W.A.C.J, [e19423@eng.pdn.ac.lk](mailto:name@email.com)
--  eNumber, Name, [email](mailto:name@email.com)
--  eNumber, Name, [email](mailto:name@email.com)
+-  E/17/083, Ekanayake E.M.M.U.B, [e17083@eng,pdn.ac,lk](mailto:name@email.com)
 
 ## Table of Contents
 1. [Introduction](#introduction)
