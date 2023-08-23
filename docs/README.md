@@ -32,6 +32,7 @@ This is a sample image, to show how to add images to your page. To learn more op
 ---
 
 ## Introduction
+ [Sample Image](./images/sample.png)
 
  description of the real world problem and solution, impact
 
