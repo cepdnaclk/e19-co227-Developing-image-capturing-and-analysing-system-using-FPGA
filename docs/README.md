@@ -22,7 +22,7 @@ This is a sample image, to show how to add images to your page. To learn more op
 ## Team-23
 -  E/19/423, Weerasingha W.A.C.J, [e19423@eng.pdn.ac.lk](mailto:name@email.com)
 -  E/17/083, Ekanayake E.M.M.U.B, [e17083@eng,pdn.ac,lk](mailto:name@email.com)
-![Sample Image](./images/sample.png)
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Image processing](#Image-processing)
@@ -31,7 +31,6 @@ This is a sample image, to show how to add images to your page. To learn more op
 5. [Technology](#Technology)
 6. [Links](#links)
 
----
 
 ## Introduction
 
@@ -41,7 +40,7 @@ The image processing is used to extract useful information from images. This inf
 
 Image processing used to extract useful information from images.This information can be used for a variety of purposes:
 				
-    				Object recognition
+    				[obfject recorgnizing Image](./images/or.jfif)
 				Medical imaging
 				Quality control
 				Space exploration
