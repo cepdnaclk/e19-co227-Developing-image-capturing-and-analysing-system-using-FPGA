@@ -25,8 +25,11 @@ This is a sample image, to show how to add images to your page. To learn more op
 
 ## Table of Contents
 1. [Introduction](#introduction)
-2. [Other Sub Topics](#other-sub-topics)
-3. [Links](#links)
+2. [Image processing](#Image-processing)
+3. [FPGA](#FPGA)
+4. [Solution](#Solution)
+5. [Technology](#Technology)
+6. [Links](#links)
 
 ---
 
@@ -37,7 +40,7 @@ The image processing is used to extract useful information from images. This inf
 ## Image processing
 ## FPGA
 ## Solution
-## Technologies
+## Technology
 
 .....
 
