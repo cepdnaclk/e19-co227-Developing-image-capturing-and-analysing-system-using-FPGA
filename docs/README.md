@@ -131,9 +131,12 @@ Overall, FPGAs are a powerful and versatile type of integrated circuit that can 
 To overcome the problems occur when using CPUs and GPUs to image processing as like as limited parallalism , latency, hard programming and energy consumption using a suitable FPGA to do calclulations for analysings and operations. Image converted to  matrix using python in computer and the matrix sent to the progeammed FPGA.FPGA Programme using HDL verilog.Then the matrix  manupiulation is done in the FPGA and the resault return to the computer.First goal to do law level image processing to gray images.Then improve for the colour images.
 
 ## Technology
-
-
-.....
+Verilog 
+system verilog
+OpenCV
+numpy
+python 
+Xlinux Vivado or Altera Quartus
 
 ## Links
 
