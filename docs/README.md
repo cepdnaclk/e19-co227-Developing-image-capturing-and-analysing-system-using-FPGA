@@ -38,6 +38,7 @@ This is a sample image, to show how to add images to your page. To learn more op
 The image processing is used to extract useful information from images. This information can be used for a variety of purposes, such as object recognition,space explotation, medical diagnosis, and quality control.Due to GPUs and CPUs are general purpose processers  parallelism is limited. GPUs and CPUs typically have latency  because they have to fetch instructions and data from memory, which can add a significant delay.ASIC is not reprogramble so new a update must done with new chip implementation.So to overcome that problems FPGAs are better choice for image processing applications. They offer better performance by highly parallelism, lower latency, lower power consumption, and easier programming.So the goal of the project is implement a simple image processing system in a FPGA.
 
 ## Image processing
+
 Image processing used to extract useful information from images.This information can be used for a variety of purposes:
 				>Object recognition
 				>Medical imaging
@@ -93,7 +94,6 @@ It can be used to extract useful information from images, such as the location o
 It can be used to automate tasks that are currently done manually, such as image classification or object detection.
 It can be used to create new applications, such as virtual reality or augmented reality.
 Image processing is a powerful tool that can be used to solve a wide variety of problems. As the field continues to grow, we can expect to see even more innovative applications of image processing in the future.
-
 
 ## FPGA
 ## Solution
