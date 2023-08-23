@@ -18,6 +18,7 @@ This is a sample image, to show how to add images to your page. To learn more op
 
 ![Sample Image](./images/sample.png)
  -->
+ [Sample Image](./images/sample.png)
 
 ## Team-23
 -  E/19/423, Weerasingha W.A.C.J, [e19423@eng.pdn.ac.lk](mailto:name@email.com)
