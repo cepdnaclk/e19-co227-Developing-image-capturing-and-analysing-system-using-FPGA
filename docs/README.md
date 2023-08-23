@@ -22,7 +22,7 @@ This is a sample image, to show how to add images to your page. To learn more op
 ## Team-23
 -  E/19/423, Weerasingha W.A.C.J, [e19423@eng.pdn.ac.lk](mailto:name@email.com)
 -  E/17/083, Ekanayake E.M.M.U.B, [e17083@eng,pdn.ac,lk](mailto:name@email.com)
-
+![Sample Image](./images/sample.png)
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Image processing](#Image-processing)
@@ -131,11 +131,11 @@ Overall, FPGAs are a powerful and versatile type of integrated circuit that can 
 To overcome the problems occur when using CPUs and GPUs to image processing as like as limited parallalism , latency, hard programming and energy consumption using a suitable FPGA to do calclulations for analysings and operations. Image converted to  matrix using python in computer and the matrix sent to the progeammed FPGA.FPGA Programme using HDL verilog.Then the matrix  manupiulation is done in the FPGA and the resault return to the computer.First goal to do law level image processing to gray images.Then improve for the colour images.
 
 ## Technology
-Verilog 
-system verilog
-OpenCV
-numpy
-python 
+Verilog, 
+system verilog,
+OpenCV,
+numpy,
+python,
 Xlinux Vivado or Altera Quartus
 
 ## Links
