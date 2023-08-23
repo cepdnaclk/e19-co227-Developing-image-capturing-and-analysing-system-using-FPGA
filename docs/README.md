@@ -40,15 +40,16 @@ The image processing is used to extract useful information from images. This inf
 ## Image processing
 
 Image processing used to extract useful information from images.This information can be used for a variety of purposes:
-				>Object recognition
-				>Medical imaging
-				>Quality control
-				>Space exploration
-  				>Multimedia
-				>Image restoration
-				>Image enchance
-				>Noice cancelling
-				>Scientafic images
+				
+    				Object recognition
+				Medical imaging
+				Quality control
+				Space exploration
+  				Multimedia
+				Image restoration
+				Image enchance
+				Noice cancelling
+				Scientafic images
 
 Some of the most common image processing applications include:
 
@@ -67,19 +68,13 @@ Image processing techniques are used to enhance the quality of multimedia conten
 Image processing three different levels :
 
 Low level: 
-	Image processing
-			
-   			input and output is an image
+	Image processing(input and output is an image)
 		
 Mid level: 
-	Image analysis
-
-  			input is an image and the output is attributes extact from the image
+	Image analysis(input is an image and the output is attributes extact from the image)
 
 High level:
-	Computer vission
-		
-  			making sense of recognized objects(AI)
+	Computer vission(making sense of recognized objects(AI))
 
 
 image processing techniques:
