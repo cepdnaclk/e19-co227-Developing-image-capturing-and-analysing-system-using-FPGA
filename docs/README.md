@@ -55,7 +55,7 @@ Some of the most common image processing applications include:
 Computer vision: This is the field of artificial intelligence that deals with the automatic interpretation of images. Computer vision 
                  techniques are used in a wide variety of applications, such as self-driving cars, facial recognition, and medical image 
                  analysis.
-Medical imaging: Image processing techniques are used to improve the quality of medical images, such as X-rays, MRI scans, and 
+# Medical imaging: Image processing techniques are used to improve the quality of medical images, such as X-rays, MRI scans, and 
                   ultrasound images. This can help doctors to diagnose diseases more accurately.
 Quality control: Image processing techniques are used to inspect products for defects. This is done by automatically scanning the images 
                  of products for any abnormalities.
