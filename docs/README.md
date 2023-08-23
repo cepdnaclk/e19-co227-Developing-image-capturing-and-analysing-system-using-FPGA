@@ -4,7 +4,7 @@ permalink: index.html
 
 # Please update this with your repository name and title
 repository-name: e19-co227-Developing-image-capturing-and-analysing-system-using-FPGA
-title:Developing image capturing and analysing system using FPGA
+title: Developing image capturing and analysing system using FPGA
 ---
 
 [comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
