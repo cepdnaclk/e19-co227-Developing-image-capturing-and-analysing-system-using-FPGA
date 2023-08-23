@@ -77,7 +77,7 @@ High level:
 	Computer vission(making sense of recognized objects(AI))
 
 
-## image processing techniques:
+## Image processing techniques:
 
 Noise removal: This involves removing unwanted noise from an image, such as Gaussian noise or salt and pepper noise.
 Sharpening: This involves improving the clarity of an image by increasing the contrast between adjacent pixels.
@@ -89,12 +89,13 @@ Color manipulation: This involves changing the color of an image.
 Image compression: This involves reducing the size of an image without losing too much information.
 Image restoration: This involves restoring an image that has been corrupted by noise or other artifacts.
 
-## benefits of image processing:
+## Benefits of image processing:
 
 It can be used to improve the quality of images, such as by removing noise or enhancing the contrast.
 It can be used to extract useful information from images, such as the location of objects or the characteristics of a scene.
 It can be used to automate tasks that are currently done manually, such as image classification or object detection.
 It can be used to create new applications, such as virtual reality or augmented reality.
+
 Image processing is a powerful tool that can be used to solve a wide variety of problems. As the field continues to grow, we can expect to see even more innovative applications of image processing in the future.
 
 ## FPGA
