@@ -54,6 +54,7 @@ bject recorgnizing
 
 ![Qc](./images/Qc.png) 
 Quality control
+
 ![mi.png](./images/![mi.png](./)
 Medical imaging
 
