@@ -51,7 +51,7 @@ Image processing used to extract useful information from images.This information
 				Noice cancelling
 				Scientafic images
 
-Some of the most common image processing applications include:
+## Some of the most common image processing applications include:
 
 Computer vision: 
 This is the field of artificial intelligence that deals with the automatic interpretation of images. Computer vision techniques are used in a wide variety of applications, such as self-driving cars, facial recognition, and medical image analysis.
@@ -65,7 +65,7 @@ Image processing techniques are used to inspect products for defects. This is do
 Multimedia: 
 Image processing techniques are used to enhance the quality of multimedia content, such as videos and images. This can be done by removing noise, sharpening the images, and adjusting the colors
 
-Image processing three different levels :
+## Image processing three different levels :
 
 Low level: 
 	Image processing(input and output is an image)
@@ -77,7 +77,7 @@ High level:
 	Computer vission(making sense of recognized objects(AI))
 
 
-image processing techniques:
+## image processing techniques:
 
 Noise removal: This involves removing unwanted noise from an image, such as Gaussian noise or salt and pepper noise.
 Sharpening: This involves improving the clarity of an image by increasing the contrast between adjacent pixels.
@@ -89,7 +89,7 @@ Color manipulation: This involves changing the color of an image.
 Image compression: This involves reducing the size of an image without losing too much information.
 Image restoration: This involves restoring an image that has been corrupted by noise or other artifacts.
 
-benefits of image processing:
+## benefits of image processing:
 
 It can be used to improve the quality of images, such as by removing noise or enhancing the contrast.
 It can be used to extract useful information from images, such as the location of objects or the characteristics of a scene.
