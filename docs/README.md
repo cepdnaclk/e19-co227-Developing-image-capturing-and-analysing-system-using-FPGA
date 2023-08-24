@@ -55,7 +55,7 @@ bject recorgnizing
 ![Qc](./images/Qc.png) 
 Quality control
 
-![mi.png](./images/![mi.png](./)
+![mi](./images/mi.jpg)
 Medical imaging
 
 ## Some of the most common image processing applications include:
