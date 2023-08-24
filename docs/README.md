@@ -49,8 +49,6 @@ Image processing used to extract useful information from images.This information
 				Image enchance
 				Noice cancelling
 				Scientafic images
-![Sample Image](./images/or.jfif)
-bject recorgnizing
 
 ![Qc](./images/Qc.png) 
 Quality control
