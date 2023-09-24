@@ -5,7 +5,7 @@
 // 
 // Create Date: 09/17/2023 11:15:46 AM
 // Design Name: salt_and_pepper_noise_filter
-// Module Name: averaging_filter
+// Module Name: averaging_filter.sv
 // Project Name: IMAGE_CAPTURING_AND_ANALYSING_SYSTEM_USING_FPGA
 // Target Devices:  Altera Terrasic
 // Tool Versions: 

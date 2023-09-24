@@ -5,11 +5,11 @@
 // 
 // Create Date: 09/17/2023 07:40:09 PM
 // Design Name: salt_and _pepper_noise_filter
-// Module Name: averaging_filter_tb
+// Module Name: averaging_filter_tb.sv
 // Project Name: IMAGE_CAPTURING_AND_ANALYSING_SYSTEM_USING_FPGA
 // Target Devices:  Altera Terasic
 // Tool Versions: 
-// Description: This module is used for bluring the image by using the averaging filter
+// Description: Testbench for averaging_filter.sv
 // 
 // Dependencies: averaging_filter.sv
 // 
@@ -28,8 +28,8 @@ module averaging_filter_tb;
                DEPTH = $clog2(R_K * C_K),     			//depth of the adding tree
                LATENCY = DEPTH + 1,				//latency in adding and multiplications
                CLK_PERIOD = 10,					//clock period
-               NUM_DATA = 1,					//number of repetitions of the test bench
-	       W_F = W_I + W_K + DEPTH;				//pixel size of a career value
+               NUM_DATA = 100,					//number of repetitions of the test bench
+	           W_F = W_I + W_K + DEPTH;				//pixel size of a career value
                
     
     typedef logic unsigned [R_I-1:0][C_I-1:0][W_I-1:0] img_t;	//image dimensions
@@ -39,10 +39,11 @@ module averaging_filter_tb;
 
     logic unsigned [W_F-1:0] val = '0;				//career value
                
-    logic clk=0, cen=1; 					//career value
+    logic clk=0, cen=1; 					//clock and clock enable
           
     averaging_filter #(.R_I(R_I),.C_I(C_I),.W_I(W_I),
                        .R_K(R_K),.C_K(C_K),.W_K(W_K)) dut(.*);
+    
     initial forever #(CLK_PERIOD/2) clk <= ~clk;
     
     initial begin
