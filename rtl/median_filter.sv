@@ -7,15 +7,15 @@
 // Design Name: salt_and_pepper_noise_filter
 // Module Name: median_filter.sv
 // Project Name: IMAGE_CAPTURING_AND_ANALYSING_SYSTEM_USING_FPGA
-// Target Devices:  Altera Terasic
-// Tool Versions: 
+// Target Devices: Altera Terasic DE2-115
+// Tool Versions: Verification - Vivado 2019.2
 // Description: This module is used for get fine edges in the image using median filter
 // 
 // Dependencies: No dependencies
 // 
 // Revision:
 // Revision 0.01 - File Created
-// Additional Comments:
+// Additional Comments: Written in System Verilog
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
@@ -65,7 +65,7 @@ module median_filter #(
 			 				for(k=0;k<(2**(l-i));k++)begin
 			 					always_ff @(posedge clk)begin
 			 						if(cen) begin
-										if(($unsigned(tree[r_i][c_i][l*(l+1)/2+i][k+j*(2**(l-i+1))+a*(2**(l+1))])<$unsigned(tree[r_i][c_i][l*(l+1)/2+i][k+j*(2**(l-i+1))+a*(2**(l+1))+(2**(l-i))])) && a%2==0 || ($unsigned(tree[r_i][c_i][l*(l+1)/2+i][k+j*(2**(l-i+1))+a*(2**(l+1))])>$unsigned(tree[r_i][c_i][l*(l+1)/2+i][k+j*(2**(l-i+1))+a*(2**(l+1))+(2**(l-i))])) && a%2==1)begin
+										if(($unsigned(tree[r_i][c_i][l*(l+1)/2+i][k+j*(2**(l-i+1))+a*(2**(l+1))])<$unsigned(tree[r_i][c_i][l*(l+1)/2+i][k+j*(2**(l-i+1))+a*(2**(l+1))+(2**(l-i))])) && !(a%2) || ($unsigned(tree[r_i][c_i][l*(l+1)/2+i][k+j*(2**(l-i+1))+a*(2**(l+1))])>$unsigned(tree[r_i][c_i][l*(l+1)/2+i][k+j*(2**(l-i+1))+a*(2**(l+1))+(2**(l-i))])) && a%2)begin
 											tree[r_i][c_i][l*(l+1)/2+i+1][k+j*(2**(l-i+1))+a*(2**(l+1))] <= tree[r_i][c_i][l*(l+1)/2+i][k+j*(2**(l-i+1))+a*(2**(l+1))+(2**(l-i))];
 											tree[r_i][c_i][l*(l+1)/2+i+1][k+j*(2**(l-i+1))+a*(2**(l+1))+(2**(l-i))] <= tree[r_i][c_i][l*(l+1)/2+i][k+j*(2**(l-i+1))+a*(2**(l+1))];
 										end
