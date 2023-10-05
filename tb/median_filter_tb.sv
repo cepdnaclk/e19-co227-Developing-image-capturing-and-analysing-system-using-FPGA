@@ -1,5 +1,6 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
+//
 // Company: Department of Computer Engineering, University of Peradeniya
 // Engineer: Mahela Ekanayake, Chaminda Weerasinghe
 // 
@@ -7,8 +8,8 @@
 // Design Name: salt_and _pepper_noise_filter
 // Module Name: median_filter_tb.sv
 // Project Name: IMAGE_CAPTURING_AND_ANALYSING_SYSTEM_USING_FPGA
-// Target Devices:  Altera Terasic
-// Tool Versions: 
+// Target Devices: Altera Terasic DE2-115
+// Tool Versions: Verification - Vivado 2019.2
 // Description: Testbench for median_filter.sv
 // 
 // Dependencies: median_filter.sv
@@ -16,6 +17,7 @@
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments: testbench to test median_filter.sv
+//                      written in System Verilog
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
@@ -68,7 +70,7 @@ module median_filter_tb;
                         end
                     end
                     
-                    for(int i=0; i<C_K*R_K; i++)begin                   //sorting and finding the median
+                    for(int i=0; i<C_K*R_K; i++)begin                   //sorting and finding the median for finding the expected median
                         for(int j=0; j<C_K*R_K-i-1; j++)begin
                             if(sort_vector[j] > sort_vector[j+1])begin
                                 temp = sort_vector[j];

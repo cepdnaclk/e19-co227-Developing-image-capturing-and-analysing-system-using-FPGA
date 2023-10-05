@@ -7,8 +7,8 @@
 // Design Name: salt_and _pepper_noise_filter
 // Module Name: averaging_filter_tb.sv
 // Project Name: IMAGE_CAPTURING_AND_ANALYSING_SYSTEM_USING_FPGA
-// Target Devices:  Altera Terasic
-// Tool Versions: 
+// Target Devices: Altera Terasic DE2-115
+// Tool Versions: Verification - Quest Sim-64 10.6c
 // Description: Testbench for averaging_filter.sv
 // 
 // Dependencies: averaging_filter.sv
@@ -16,9 +16,9 @@
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments: testbench to test averaging_filter.sv
+//                      Written in System Verilog
 // 
 //////////////////////////////////////////////////////////////////////////////////
-
 
 module averaging_filter_tb;
     timeunit 1ns/1ps;

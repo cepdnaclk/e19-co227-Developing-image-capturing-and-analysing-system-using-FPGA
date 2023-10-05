@@ -7,18 +7,17 @@
 // Design Name: salt_and_pepper_noise_filter
 // Module Name: averaging_filter.sv
 // Project Name: IMAGE_CAPTURING_AND_ANALYSING_SYSTEM_USING_FPGA
-// Target Devices:  Altera Terrasic
-// Tool Versions: 
+// Target Devices:  Altera Terasic DE2-115
+// Tool Versions: Verification - Quest Sim-64 10.6c
 // Description: This module is used for bluring the image by using the averaging filter
 // 
 // Dependencies: No dependencies
 // 
 // Revision:
 // Revision 0.01 - File Created
-// Additional Comments:
+// Additional Comments: Written in System Verilog
 // 
 //////////////////////////////////////////////////////////////////////////////////
-
 
 module averaging_filter #(
        parameter    R_I = 16, C_I = 16, W_I = 8,   //dimensions of input image which is padded
