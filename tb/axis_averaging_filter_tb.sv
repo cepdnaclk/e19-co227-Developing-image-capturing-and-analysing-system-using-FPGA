@@ -80,7 +80,8 @@ module axis_averaging_filter_tb;
                 S_valid.randomize();                               // randomize signals
                 M_ready.randomize();
                 #1 s_axis_averaging_valid <= (S_valid.signal < 'd26);       // signal with a probability of 26/128
-                m_axis_averaging_ready <= (M_ready.signal < 'd26);
+                #(CLK_PERIOD * LATENCY);                                    
+                m_axis_averaging_ready <= (M_ready.signal < 'd26);          //master ready = 1 after latency period of time spent after slave valid = 1
 
                 if(S_valid.signal < 'd26)                          // make sure slave valid happen before master ready
                     s_valid_done <= 1;

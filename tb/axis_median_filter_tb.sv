@@ -30,10 +30,12 @@ endclass
 
 module axis_median_filter_tb;   
 
-    parameter R_I=5, C_I=5, W_I=8, R_K=3, C_K=3, W_K=8;             // Image dimensions and kernel dimensions
+    parameter R_I=5, C_I=5, W_I=8, R_K=3, C_K=3;                     // Image dimensions and kernel dimensions
 
     localparam CLK_PERIOD = 10, NUM_EXP =3,                         // clock period and number of experiments
-               LATENCY = ($clog2(R_K*C_K)+1) * $clog2(R_K*C_K)/2 + 1;   // latency  
+               LEVEL = $clog2(R_K*C_K),
+               DEPTH = LEVEL * (LEVEL + 1),
+               LATENCY = DEPTH + 1;                                 // latency  
     logic      clk = 0, rstn = 0;                                       // clock and reset intiating
 
     initial forever
@@ -76,7 +78,8 @@ module axis_median_filter_tb;
                 S_valid.randomize();                                    //randomize slave valid and master ready signals
                 M_ready.randomize();
                 #1 s_axis_median_valid <= (S_valid.signal < 'd26);      //slave valid and master ready signals were input in a probabilty of 26/128
-                m_axis_median_ready <= (M_ready.signal < 'd26);
+                #(CLK_PERIOD * LATENCY);
+                m_axis_median_ready <= (M_ready.signal < 'd26);         //master ready = 1 after latency period of time spent after slave valid = 1
 
                 if(S_valid.signal < 'd26)                               //make sure slave valid signal happens first
                     s_valid_done <= 1;
