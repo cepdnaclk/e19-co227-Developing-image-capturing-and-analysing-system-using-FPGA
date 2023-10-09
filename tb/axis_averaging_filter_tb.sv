@@ -30,10 +30,10 @@ endclass
 
 module axis_averaging_filter_tb;
 
-    parameter R_I=5, C_I=5, W_I=8, R_K=3, C_K=3, W_K=8;                // Image dimensions and kernel dimensions
+    parameter R_I=5, C_I=5, W_I=8, R_K=3, C_K=3;                                    // Image dimensions and kernel dimensions
 
     localparam CLK_PERIOD = 10, NUM_EXP = 3, LATENCY = $clog2(R_K*C_K) + 1,         // clock period, number of experiments to do and latency
-               W_F= W_I + W_K + $clog2(R_K*C_K);                                    // dimension of holding value
+               W_F= W_I + $clog2(R_K*C_K);                                          // dimension of holding value
     logic      clk=0, rstn=0;                                                       // clock and reset
 
     initial forever 
@@ -45,7 +45,6 @@ module axis_averaging_filter_tb;
     logic s_axis_averaging_ready, m_axis_averaging_valid;                                               // slave ready and master valid (outputs)
     
 
-    logic [R_K-1:0][C_K-1:0][W_K-1:0] kernel;                        // kernel
 
     bit done, s_valid_done;                                         // to verify whether master ready and slave valid has occured
                                                                     // done when master ready is 1 after slave_valid_done is 1
@@ -92,19 +91,13 @@ module axis_averaging_filter_tb;
 
             #(CLK_PERIOD * (LATENCY-1));
 
-            for(int r_k=0; r_k<R_K; r_k++)begin			//initialize the kernel
-                for(int c_k=0; c_k<C_K; c_k++)begin
-                    kernel[r_k][c_k] = 8'd1;
-                end
-            end
-
             for(int r_i=0; r_i<R_I; r_i++)begin			//calculating the expected output resulted to see whether output from rtl is same
                 for(int c_i=0; c_i<C_I; c_i++)begin
                     val = 0;
                     for(int r_k=-(R_K-1)/2; r_k<=(R_K-1)/2; r_k++)begin
                         for(int c_k=-(C_K-1)/2; c_k<=(C_K-1)/2; c_k++)begin
                             if(r_i+r_k>=0 && r_i+r_k<R_I && c_i+c_k>=0 && c_i+c_k<C_I)
-                                val = val + s_axis_averaging_data[r_i+r_k][c_i+c_k] * kernel[r_k+(R_K-1)/2][c_k+(C_K-1)/2];
+                                val = val + s_axis_averaging_data[r_i+r_k][c_i+c_k];
                         end
                     end
                     final_img_exp[r_i][c_i] = val/(C_K*R_K);      //expected output image
