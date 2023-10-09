@@ -29,7 +29,7 @@ endclass
 
 module axis_salt_and_pepper_filter_tb;
 
-    parameter   R_I=5, C_I=5, W_I=8, R_K=3, C_K=3, W_K=8;            //image dimensions
+    parameter   R_I=5, C_I=5, W_I=8, R_K=3, C_K=3;                  //image dimensions
 
     localparam  DEPTH_AVERAGING = $clog2(R_K*C_K),                  //depth of the addition tree in averaging filter
                 LATENCY_AVERAGING = DEPTH_AVERAGING + 1,            //latency of averaging filter
@@ -38,7 +38,7 @@ module axis_salt_and_pepper_filter_tb;
                 LATENCY_MEDIAN = DEPTH_MEDIAN + 1,                  //latency of the median filter
                 LATENCY = LATENCY_AVERAGING + LATENCY_MEDIAN,       //latency of the axis salt and pepper filter
 
-                W_F = W_I + W_K + $clog2(R_K*C_K),                  //width of the holding value in addition tree for averaging filter verification
+                W_F = W_I + $clog2(R_K*C_K),                        //width of the holding value in addition tree for averaging filter verification
 
                 CLK_PERIOD = 10, NUM_EXP = 3;                       //clock period, number of experiments
 
@@ -51,8 +51,6 @@ module axis_salt_and_pepper_filter_tb;
     //slave data, master data, final expected data and intermediate data
     logic s_axis_salt_and_pepper_valid = 0, m_axis_salt_and_pepper_ready;   //slave valid and master ready signals
     logic s_axis_salt_and_pepper_ready, m_axis_salt_and_pepper_valid;       //slave ready and master valid signals
-
-    logic [R_K-1:0][C_K-1:0][W_K-1:0] kernel;                       //kernel for averaging filter
 
     bit done, s_valid_done;                                         //done => when master ready happens after slave valid
 
@@ -101,19 +99,13 @@ module axis_salt_and_pepper_filter_tb;
 
             #(CLK_PERIOD * (LATENCY-1));
 
-            for(int r_k=0; r_k<R_K; r_k++)begin			//initialize the kernel
-                for(int c_k=0; c_k<C_K; c_k++)begin
-                    kernel[r_k][c_k] = 8'd1;
-                end
-            end
-
             for(int r_i=0; r_i<R_I; r_i++)begin			//calculating the expected output resulted to see whether output from rtl is same
                 for(int c_i=0; c_i<C_I; c_i++)begin
                     val = 0;
                     for(int r_k=-(R_K-1)/2; r_k<=(R_K-1)/2; r_k++)begin
                         for(int c_k=-(C_K-1)/2; c_k<=(C_K-1)/2; c_k++)begin
                             if(r_i+r_k>=0 && r_i+r_k<R_I && c_i+c_k>=0 && c_i+c_k<C_I)
-                                val = val + s_axis_salt_and_pepper_data[r_i+r_k][c_i+c_k] * kernel[r_k+(R_K-1)/2][c_k+(C_K-1)/2];
+                                val = val + s_axis_salt_and_pepper_data[r_i+r_k][c_i+c_k];
                         end
                     end
                     intmd_img_exp[r_i][c_i] = val/(C_K*R_K);      //expected output image
