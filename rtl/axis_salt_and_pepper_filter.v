@@ -14,8 +14,6 @@
 // 
 // Dependencies: axis_averaging_filter.v, axis_median_filter.v
 // 
-// Revision:
-// Revision 0.01 - File Created
 // Additional Comments: This is written in Old Verilog to avoid multi dimensional torques
 // 
 //////////////////////////////////////////////////////////////////////////////////
