@@ -13,8 +13,6 @@
 // 
 // Dependencies: axis_averaging_filter.v
 // 
-// Revision:
-// Revision 0.01 - File Created
 // Additional Comments: testbench to test axis_averaging_filter.v
 //                      Written in System Verilog
 // 

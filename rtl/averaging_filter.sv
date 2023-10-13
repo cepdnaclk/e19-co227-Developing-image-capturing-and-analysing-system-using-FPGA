@@ -13,8 +13,6 @@
 // 
 // Dependencies: No dependencies
 // 
-// Revision:
-// Revision 0.01 - File Created
 // Additional Comments: Written in System Verilog
 // 
 //////////////////////////////////////////////////////////////////////////////////
@@ -65,9 +63,7 @@ module averaging_filter #(
 					end
 				end
 			end
-			assign final_img[r_i][c_i] = tree [r_i][c_i][DEPTH][0]/(C_K*R_K);	// final output cell
-
-			
+			assign final_img[r_i][c_i] = tree [r_i][c_i][DEPTH][0]/(C_K*R_K);	// final output cell	
 		end
     end
     
