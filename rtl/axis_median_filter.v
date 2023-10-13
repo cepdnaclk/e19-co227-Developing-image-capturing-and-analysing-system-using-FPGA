@@ -14,8 +14,6 @@
 // 
 // Dependencies: skid_buffer.sv, median_filter.sv
 // 
-// Revision:
-// Revision 0.01 - File Created
 // Additional Comments: This is written in Old Verilog to avoid multi dimensional torques
 // 
 //////////////////////////////////////////////////////////////////////////////////
