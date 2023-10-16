@@ -4,16 +4,16 @@
 // Engineer: Mahela Ekanayake, Chaminda Weerasinghe
 // 
 // Create Date: 10/15/2023 11:11:16 PM
-// Design Name: salt_and _pepper_noise_filter
+// Design Name: median_filter_system
 // Module Name: axis_salt_and_pepper_uart_system_tb.sv
 // Project Name: IMAGE_CAPTURING_AND_ANALYSING_SYSTEM_USING_FPGA
 // Target Devices: Altera Terasic DE2-115
 // Tool Versions: Verification - Vivado 2019.2
 // Description: This is the testbench for the axis_salt_and_pepper_uart_system.v
 // 
-// Dependencies: axis_salt_and_pepper_uart_system.v
+// Dependencies: axis_median_filter_uart_system.v
 // 
-// Additional Comments: testbench for the axis_salt_and_pepper_uart_system.v
+// Additional Comments: testbench for the axis_median_filter_uart_system.v
 //                      Written in System Verilog
 // 
 //////////////////////////////////////////////////////////////////////////////////
@@ -22,7 +22,7 @@ class Random_Data_SNPUART #(R_I=7, C_I=7, W_I=8);                              /
     rand bit [R_I-1:0][C_I-1:0][W_I-1:0] data;
 endclass
 
-module axis_salt_and_pepper_uart_system_tb;
+module axis_median_filter_uart_system_tb;
 
     parameter  R_I = 7, C_I = 7, W_I = 8, R_K = 3, C_K = 3,                   // image dimensions and kernel dimensions
                CLOCKS_PER_PULSE = 4,                                          // clock speed of FPGA/ baud rate
@@ -36,7 +36,7 @@ module axis_salt_and_pepper_uart_system_tb;
                 PACKET_SIZE = BITS_PER_WORD + 5;                              // size of a single packet
 
     logic   clk = 0, rstn = 0, rx = 1, tx;                                    
-    logic   [R_I-1:0][C_I-1:0][W_I-1:0] img_data,intmd_img_exp, final_img_exp; 
+    logic   [R_I-1:0][C_I-1:0][W_I-1:0] img_data, final_img_exp; 
     logic   [NUM_WORDS-1:0][BITS_PER_WORD-1:0] img_data_word_form, rx_data;
     logic   [BITS_PER_WORD+2-1:0] packet;
     logic   [BITS_PER_WORD-1:0] rx_word;
@@ -49,7 +49,7 @@ module axis_salt_and_pepper_uart_system_tb;
     initial forever                                                           //clock generation
         #(CLK_PERIOD/2) clk <= ~clk;
 
-    axis_salt_and_pepper_uart_system #(                                       //import axis_salt_and_pepper_uart_system.v
+    axis_median_filter_uart_system #(                                       //import axis_salt_and_pepper_uart_system.v
                 .CLOCKS_PER_PULSE(CLOCKS_PER_PULSE),
                 .BITS_PER_WORD(BITS_PER_WORD),
                 .R_I(R_I),
@@ -89,25 +89,12 @@ module axis_salt_and_pepper_uart_system_tb;
 
             #(CLK_PERIOD);
 
-            for(int r_i=0; r_i<R_I; r_i++)begin			                //calculating the expected output resulted to see whether output from rtl is same
-                for(int c_i=0; c_i<C_I; c_i++)begin
-                    val = 0;
-                    for(int r_k=-(R_K-1)/2; r_k<=(R_K-1)/2; r_k++)begin
-                        for(int c_k=-(C_K-1)/2; c_k<=(C_K-1)/2; c_k++)begin
-                            if(r_i+r_k>=0 && r_i+r_k<R_I && c_i+c_k>=0 && c_i+c_k<C_I)
-                                val = val + img_data[r_i+r_k][c_i+c_k];
-                        end
-                    end
-                    intmd_img_exp[r_i][c_i] = val/(C_K*R_K);            //expected output image
-                end
-            end
-
             for(int r_i=0; r_i<R_I; r_i++)begin			                //filling the data to sorting vector
                 for(int c_i=0; c_i<C_I; c_i++)begin
                     for(int r_k=-(R_K-1)/2; r_k<=(R_K-1)/2; r_k++)begin
                         for(int c_k=-(C_K-1)/2; c_k<=(C_K-1)/2; c_k++)begin
                             if(r_i+r_k>=0 && r_i+r_k<R_I && c_i+c_k>=0 && c_i+c_k<C_I)
-                                sort_vector[(r_k+(R_K-1)/2)*C_K+(c_k+(C_K-1)/2)] = intmd_img_exp[r_i+r_k][c_i+c_k];
+                                sort_vector[(r_k+(R_K-1)/2)*C_K+(c_k+(C_K-1)/2)] = img_data[r_i+r_k][c_i+c_k];
                             else
                                 sort_vector[(r_k+(R_K-1)/2)*C_K+(c_k+(C_K-1)/2)] = 0;
                         end

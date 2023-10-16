@@ -4,7 +4,7 @@
 // Engineer: Mahela Ekanayake, Chaminda Weerasinghe
 // 
 // Create Date: 10/12/2023 10:39:25 AM
-// Design Name: salt_and _pepper_noise_filter
+// Design Name: median_filter_system
 // Module Name: uart_rx.sv
 // Project Name: IMAGE_CAPTURING_AND_ANALYSING_SYSTEM_USING_FPGA
 // Target Devices: Altera Terasic DE2-115

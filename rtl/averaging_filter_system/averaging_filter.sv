@@ -4,7 +4,7 @@
 // Engineer: Mahela Ekanayake, Chaminda Weerasinghe
 // 
 // Create Date: 09/17/2023 11:15:46 AM
-// Design Name: salt_and_pepper_noise_filter
+// Design Name: averaging_filter_system
 // Module Name: averaging_filter.sv
 // Project Name: IMAGE_CAPTURING_AND_ANALYSING_SYSTEM_USING_FPGA
 // Target Devices:  Altera Terasic DE2-115
