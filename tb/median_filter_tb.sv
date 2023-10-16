@@ -14,8 +14,6 @@
 // 
 // Dependencies: median_filter.sv
 // 
-// Revision:
-// Revision 0.01 - File Created
 // Additional Comments: testbench to test median_filter.sv
 //                      written in System Verilog
 // 

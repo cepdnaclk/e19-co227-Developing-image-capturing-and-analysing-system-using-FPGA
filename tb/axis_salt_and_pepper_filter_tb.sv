@@ -13,8 +13,6 @@
 // 
 // Dependencies: axis_salt_and_pepper_filter.v
 // 
-// Revision:
-// Revision 0.01 - File Created
 // Additional Comments: written in system verilog
 // 
 //////////////////////////////////////////////////////////////////////////////////

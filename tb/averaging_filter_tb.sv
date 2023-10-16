@@ -13,8 +13,6 @@
 // 
 // Dependencies: averaging_filter.sv
 // 
-// Revision:
-// Revision 0.01 - File Created
 // Additional Comments: testbench to test averaging_filter.sv
 //                      Written in System Verilog
 // 
