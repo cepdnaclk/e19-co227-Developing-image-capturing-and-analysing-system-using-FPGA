@@ -35,7 +35,7 @@ module median_filter #(
 
     genvar r_i,r_k,c_i,c_k,l,a,i,j,k;
 
-    for(r_i=0;r_i<R_I;r_i++)begin
+    for(r_i=0;r_i<R_I;r_i++)begin											
 		for(c_i=0;c_i<C_I;c_i++)begin					  					//for each leave in the tree
 			for(r_k=-(R_K-1)/2;r_k<=(R_K-1)/2;r_k++)begin
 				for(c_k=-(C_K-1)/2;c_k<=(C_K-1)/2;c_k++)begin
