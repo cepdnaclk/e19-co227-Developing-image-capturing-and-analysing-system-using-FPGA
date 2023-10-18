@@ -2,6 +2,7 @@ import numpy as np
 import cv2
 import math
 import serial
+import time
 
 #kernel size of the filter
 KERNEL_SIZE = 3
@@ -37,6 +38,8 @@ c_blocks = int((img_input.shape[1]-2*MARGIN)/BLOCK_SIZE)
 #initiating the block to be sent to the FPGA
 block_transfer = np.zeros((BLOCK_SIZE+MARGIN*2,BLOCK_SIZE+MARGIN*2),np.uint8)
 
+initial_time = time.time()
+
 for i in range(r_blocks):
     for j in range(c_blocks):
         for k in range(BLOCK_SIZE+MARGIN*2):
@@ -68,5 +71,8 @@ for i in range(R_I):
 
 #generating the final image
 cv2.imwrite(r"C:\Users\dtc\Desktop\opencv_test\filtered_image.jpg",final_img)
+
+curr = time.time()
+print(curr-initial,"Seconds taken")
 
 
